@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Windows 10\\TrabalhoPOO\\TrabalhoPOO.csproj": {}
+    "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\TrabalhoPOO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Windows 10\\TrabalhoPOO\\TrabalhoPOO.csproj": {
+    "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\TrabalhoPOO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows 10\\TrabalhoPOO\\TrabalhoPOO.csproj",
+        "projectUniqueName": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\TrabalhoPOO.csproj",
         "projectName": "TrabalhoPOO",
-        "projectPath": "C:\\Users\\Windows 10\\TrabalhoPOO\\TrabalhoPOO.csproj",
-        "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows 10\\TrabalhoPOO\\obj\\",
+        "projectPath": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\TrabalhoPOO.csproj",
+        "packagesPath": "C:\\Users\\Kauã\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Kauã\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
