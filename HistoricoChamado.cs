@@ -1,34 +1,51 @@
-using System;
+public class HistoricoChamado{
+    private int idHistorico;
+    private DateTime data;
+    private string descricao;
+    private string novoStatus;
+    private string statusAnterior;
+    private List<string> comentarios = new List<string>();
+    
+    public HistoricoChamado(int idHistorico){
+        this.idHistorico = idHistorico;
+        this.data = DateTime.Now;
+        this.descricao = string.Empty;
+        this.novoStatus = string.Empty;
+        this.statusAnterior = string.Empty;
+    }
 
-namespace SistemaHelpDesk
-{
-    public class HistoricoChamado
-    {
-        // Atributos
-        public int IdHistorico { get; set; }
-        public string Descricao { get; set; }
-        public DateTime DataRegistro { get; set; }
+    public int IdHistorico{
+        get { return idHistorico; }
+    }
 
-        // Relacionamento
-        public Chamado Chamado { get; set; }
+    public DateTime Data{
+        get { return data; }
+    }
 
-        // Construtor
-        public HistoricoChamado(string descricao, Chamado chamado)
-        {
-            Descricao = descricao;
-            Chamado = chamado;
-            DataRegistro = DateTime.Now;
-        }
+    public string Descricao{
+        get { return descricao; }
+        set { descricao = value; }
+    }
 
-        // Métodos
-        public void AtualizarDescricao(string novaDescricao)
-        {
-            Descricao = novaDescricao;
-        }
+    public string NovoStatus{
+        get { return novoStatus; }
+        set { novoStatus = value; }
+    }
 
-        public string ObterResumo()
-        {
-            return $"{DataRegistro}: {Descricao}";
-        }
+    public string StatusAnterior{
+        get { return statusAnterior; }
+        set { statusAnterior = value; }
+    }
+
+    public void RegistrarHistorico(string descricao, string novoStatus, string statusAnterior){
+        this.data = DateTime.Now;
+        this.descricao = descricao;
+        this.statusAnterior = statusAnterior;
+        this.novoStatus = novoStatus;
+    }
+
+    public void AdicionarComentarios(string comentario){
+        string comentarioCompleto = $"{DateTime.Now}: {comentario}";
+        comentarios.Add(comentarioCompleto);
     }
 }
