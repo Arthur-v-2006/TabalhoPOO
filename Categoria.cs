@@ -1,29 +1,44 @@
-namespace SistemaHelpDesk
-{
-    public class Categoria
-    {
-        // Atributos
-        public int IdCategoria { get; set; }
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
+public class Categoria{
+    private int idCategoria;
+    public string nome;
+    public string descricao;
+    private string departamentoResponsavel;
 
-        // Construtor
-        public Categoria(int idCategoria, string nome, string descricao)
-        {
-            IdCategoria = idCategoria;
-            Nome = nome;
-            Descricao = descricao;
-        }
+    public Categoria(int idCategoria, string nome, string descricao, string departamentoResponsavel){
+        this.idCategoria = idCategoria;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.departamentoResponsavel = departamentoResponsavel;
+    }
 
-        // Métodos
-        public void AtualizarDescricao(string novaDescricao)
-        {
-            Descricao = novaDescricao;
-        }
+    public int IdCategoria{
+        get { return idCategoria; }
+    }
 
-        public string ExibirCategoria()
-        {
-            return $"{Nome} - {Descricao}";
+    public string DepartamentoResponsavel{
+        get { return departamentoResponsavel; }
+        set { departamentoResponsavel = value; }
+    }
+
+    public static Categoria CadastrarCategoria(int id, string nome, string descricao, string departamento){
+        return new Categoria(id, nome, descricao, departamento);
+    }
+
+    public void EditarCategoria(string novoNome, string novaDescricao, string novoDepartamento){
+        this.nome = novoNome;
+        this.descricao = novaDescricao;
+        this.departamentoResponsavel = novoDepartamento;
+    }
+
+    public List<Chamado> ListarChamadoPorCategoria(List<Chamado> todosChamados){
+        var chamadosDaCategoria = new List<Chamado>();
+        
+        foreach (var chamado in todosChamados){
+            if (chamado.Categoria != null && chamado.Categoria.idCategoria == this.idCategoria){
+                chamadosDaCategoria.Add(chamado);
+            }
         }
+        
+        return chamadosDaCategoria;
     }
 }
