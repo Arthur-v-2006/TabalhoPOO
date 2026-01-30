@@ -1,4 +1,4 @@
-public class Chamado{
+public class Chamado : IAtribuivel, IEncerravel{
     private int idChamado;
     public string titulo;
     public string descricao;
@@ -74,6 +74,31 @@ public class Chamado{
     public HistoricoChamado Historico{
         get { return historico; }
     }
+
+    public void AtribuirTecnico(Tecnico tecnico){
+        if (tecnico == null)
+            throw new ArgumentNullException(nameof(tecnico));
+            
+        this.tecnico = tecnico;
+        Console.WriteLine($"Técnico {tecnico.Nome} atribuído ao chamado {IdChamado}");
+    }
+    
+    public void Encerrar(string motivo)
+    {
+        if (string.IsNullOrWhiteSpace(motivo))
+            throw new ArgumentException("Motivo do encerramento é obrigatório");
+            
+        this.dataFechamento = DateTime.Now;
+        this.status = "Fechado";
+        
+        historico.RegistrarHistorico($"Chamado encerrado. Motivo: {motivo}", "Fechado", status);
+        
+        Console.WriteLine($"Chamado {IdChamado} encerrado. Motivo: {motivo}");
+    }
+    
+    public void FecharChamado(){
+        Encerrar("Fechamento padrão pelo sistema");
+    }
     
     public string GerarProtocolo(){
         return $"CHM-{idChamado:0000}-{dataAbertura:yyyyMMdd}";
@@ -81,11 +106,6 @@ public class Chamado{
 
     public void AlterarStatus(string novoStatus){
         status = novoStatus;
-    }
-
-    public void FecharChamado(){
-        dataFechamento = DateTime.Now;
-        status = "Fechado";
     }
 
     public void AtualizarDescricao(string novaDescricao){
