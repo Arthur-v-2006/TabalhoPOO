@@ -70,7 +70,7 @@ public abstract class Usuario{
                 Console.WriteLine("Para alterar a senha, informe a senha atual.");
                 return dadosAlterados;
             }
-            
+
             if (this.senha != senhaAtual){
                 Console.WriteLine("Senha atual incorreta.");
                 return dadosAlterados;
@@ -86,6 +86,13 @@ public abstract class Usuario{
             }
         }
         return dadosAlterados;
+    }
+
+    public virtual void ExibirInformacoes(){
+        Console.WriteLine($"ID: {idUsuario}");
+        Console.WriteLine($"Nome: {nome}");
+        Console.WriteLine($"Email: {email}");
+        Console.WriteLine($"Status: {(ativo ? "Ativo" : "Inativo")}");
     }
 
 }

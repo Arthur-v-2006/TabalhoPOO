@@ -54,4 +54,13 @@ public class Cliente : Usuario{
         Console.WriteLine($"Cliente {Nome} cancelou o chamado.");
         Console.WriteLine($"Motivo: solicitação do cliente.");
     }
+
+    public override void ExibirInformacoes(){
+        base.ExibirInformacoes();
+        Console.WriteLine($"Tipo: Cliente");
+        Console.WriteLine($"Empresa: {empresa}");
+        Console.WriteLine($"Telefone: {telefone}");
+        Console.WriteLine($"CPF/CNPJ: {cpfCnpj}");
+        Console.WriteLine($"Endereço: {endereco}");
+    }
 }

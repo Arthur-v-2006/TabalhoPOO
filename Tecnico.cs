@@ -33,4 +33,13 @@ public class Tecnico : Usuario{
     public void AdicionarObservacao(string observacao){
         Console.WriteLine($"Observação: {observacao}");
     }
+
+    public override void ExibirInformacoes(){
+        base.ExibirInformacoes();
+        Console.WriteLine($"Tipo: Técnico");
+        Console.WriteLine($"Especialidade: {Especialidade}");
+        Console.WriteLine($"Nível: {Nivel}");
+        Console.WriteLine($"Carga Horária: {CargaHoraria}");
+        Console.WriteLine($"Chamados Resolvidos: {QtdChamadosResolvidos}");
+    }
 }
