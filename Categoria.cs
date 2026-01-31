@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+
+namespace TrabalhoPoo;
+
 public class Categoria{
     private int idCategoria;
     public string nome;

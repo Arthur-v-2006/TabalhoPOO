@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+
+namespace TrabalhoPoo;
+
 public class Tecnico : Usuario{
     private string Especialidade;
     private string Nivel;

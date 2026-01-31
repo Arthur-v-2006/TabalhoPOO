@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+
+namespace TrabalhoPoo;
+
 public class Chamado : IAtribuivel, IEncerravel{
     private int idChamado;
     public string titulo;

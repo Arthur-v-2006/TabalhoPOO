@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+
+namespace TrabalhoPoo;
+
 public class Cliente : Usuario{
     private string empresa;
     private string telefone;

@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+
+namespace TrabalhoPoo;
+
 public class HistoricoChamado{
     private int idHistorico;
     private DateTime data;

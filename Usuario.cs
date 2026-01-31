@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+
+namespace TrabalhoPoo;
+
 public abstract class Usuario{
     protected int idUsuario;
     protected string nome;
