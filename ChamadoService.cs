@@ -8,8 +8,11 @@ namespace TrabalhoPoo;
 // DIP: Depende de abstração (IChamadoRepository), não de implementação concreta
 // ISP: Implementa apenas métodos necessários para serviços de chamado
 public class ChamadoService{
+
+    // DIP: Depende de interface IChamadoRepository, não de implementação concreta
     private readonly IChamadoRepository _chamadoRepository;
 
+    // Dependency Injection - Inversão de dependência
     public ChamadoService(IChamadoRepository chamadoRepository)
     {
         _chamadoRepository = chamadoRepository ?? throw new ArgumentNullException(nameof(chamadoRepository));
