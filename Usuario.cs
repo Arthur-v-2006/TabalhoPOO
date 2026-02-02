@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TrabalhoPoo;
 
+// SRP: Responsabilidade única - gerenciar dados básicos de usuário
+// OCP: Aberta para extensão (Cliente, Tecnico) mas fechada para modificação
+// LSP: Pode ser substituída por qualquer classe derivada sem quebrar o sistema
 public abstract class Usuario{
     protected int idUsuario;
     protected string nome;

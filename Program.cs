@@ -5,6 +5,12 @@ namespace TrabalhoPoo;
 public class Program{
     public static void Main(string[] args){
         Console.WriteLine("SISTEMA DE CHAMADOS");
+
+         // DIP: Criando a implementação concreta do repositório
+    IChamadoRepository chamadoRepository = new ChamadoRepository();
+    
+    // DIP: Injetando a dependência no serviço (Dependency Injection)
+    ChamadoService chamadoService = new ChamadoService(chamadoRepository);
         
         Categoria categoriaTI = Categoria.CadastrarCategoria(
             1, 
@@ -62,7 +68,6 @@ public class Program{
             TimeSpan.FromHours(40)
         );
         
-        ChamadoService chamadoService = new ChamadoService();
         
         Chamado chamado1 = new Chamado(
             1001, 
@@ -122,7 +127,7 @@ public class Program{
         Console.WriteLine($"Protocolo do chamado 1001: {chamado1.GerarProtocolo()}");
         
         Console.WriteLine("\n=== CHAMADOS POR CATEGORIA ===");
-        var chamadosCategoriaTI = categoriaTI.ListarChamadoPorCategoria(chamadoService.ListarPorStatus("Todos"));
+        var chamadosCategoriaTI = categoriaTI.ListarChamadoPorCategoria(chamadoService.ListarTodosChamados());
         Console.WriteLine($"Chamados na categoria TI: {chamadosCategoriaTI.Count}");
         
         Console.WriteLine("\n=== FIM DO PROGRAMA ===");

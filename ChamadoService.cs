@@ -4,8 +4,16 @@ using System.Linq;
 
 namespace TrabalhoPoo;
 
+// SRP: Responsabilidade única - gerenciar regras de negócio de chamados
+// DIP: Depende de abstração (IChamadoRepository), não de implementação concreta
+// ISP: Implementa apenas métodos necessários para serviços de chamado
 public class ChamadoService{
-    private List<Chamado> _chamados = new List<Chamado>();
+    private readonly IChamadoRepository _chamadoRepository;
+
+    public ChamadoService(IChamadoRepository chamadoRepository)
+    {
+        _chamadoRepository = chamadoRepository ?? throw new ArgumentNullException(nameof(chamadoRepository));
+    }
     
     public void AbrirChamado(Chamado chamado){
         if (chamado == null){
@@ -13,14 +21,12 @@ public class ChamadoService{
             return;
         }
         
-        _chamados.Add(chamado);
+        _chamadoRepository.Adicionar(chamado);
         Console.WriteLine($"Chamado #{chamado.IdChamado} aberto com sucesso!");
     }
     
     public List<Chamado> ListarPorStatus(string status){
-        var resultado = _chamados
-            .Where(c => c.Status.ToLower() == status.ToLower())
-            .ToList();
+        var resultado = _chamadoRepository.ListarPorStatus(status);
             
         Console.WriteLine($"Chamados com status '{status}': {resultado.Count}");
         return resultado;
@@ -32,16 +38,14 @@ public class ChamadoService{
             return new List<Chamado>();
         }
         
-        var resultado = _chamados
-            .Where(c => c.Tecnico != null && c.Tecnico.IdUsuario == tecnico.IdUsuario)
-            .ToList();
+        var resultado = _chamadoRepository.ListarPorTecnico(tecnico);
             
         Console.WriteLine($"Chamados do técnico {tecnico.Nome}: {resultado.Count}");
         return resultado;
     }
     
     public void AtribuirTecnico(int idChamado, Tecnico tecnico){
-        var chamado = BuscarPorId(idChamado);
+        var chamado = _chamadoRepository.BuscarPorId(idChamado);
         
         if (chamado == null){
             Console.WriteLine($"Chamado #{idChamado} não encontrado");
@@ -60,23 +64,26 @@ public class ChamadoService{
     }
     
     public Chamado BuscarPorId(int id){
-        return _chamados.FirstOrDefault(c => c.IdChamado == id);
+        return _chamadoRepository.BuscarPorId(id);
     }
     
     public void ListarTodos(){
-        if (_chamados.Count == 0){
+
+        var chamados = _chamadoRepository.ListarTodos();
+
+        if (chamados.Count == 0){
             Console.WriteLine("📭 Nenhum chamado cadastrado");
             return;
         }
         
         Console.WriteLine("📋 LISTA DE CHAMADOS:");
-        foreach (var chamado in _chamados){
+        foreach (var chamado in chamados){
             Console.WriteLine($"#{chamado.IdChamado} - {chamado.Titulo} - Status: {chamado.Status}");
         }
     }
     
     public void FecharChamado(int idChamado, string motivo){
-        var chamado = BuscarPorId(idChamado);
+        var chamado = _chamadoRepository.BuscarPorId(idChamado);
         
         if (chamado == null){
             Console.WriteLine($"Chamado #{idChamado} não encontrado");
@@ -86,14 +93,22 @@ public class ChamadoService{
         chamado.Encerrar(motivo);
         Console.WriteLine($"Chamado #{idChamado} fechado");
     }
+
+    public List<Chamado> ListarTodosChamados()
+    {
+        return _chamadoRepository.ListarTodos();
+    }
     
     public void MostrarResumo(){
+
+        var chamados = _chamadoRepository.ListarTodos();
+
         Console.WriteLine("RESUMO DO SISTEMA:");
-        Console.WriteLine($"Total de chamados: {_chamados.Count}");
+        Console.WriteLine($"Total de chamados: {chamados.Count}");
         
-        var abertos = _chamados.Count(c => c.Status == "Aberto");
-        var emAtendimento = _chamados.Count(c => c.Status == "Em Atendimento");
-        var fechados = _chamados.Count(c => c.Status == "Fechado");
+        var abertos = chamados.Count(c => c.Status == "Aberto");
+        var emAtendimento = chamados.Count(c => c.Status == "Em Atendimento");
+        var fechados = chamados.Count(c => c.Status == "Fechado");
         
         Console.WriteLine($"• Abertos: {abertos}");
         Console.WriteLine($"• Em atendimento: {emAtendimento}");

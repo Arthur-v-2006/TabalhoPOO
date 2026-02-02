@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace TrabalhoPoo;
 
+// SRP: Responsabilidade única - gerenciar histórico de alterações de chamados
+// OCP: Aberta para extensão de novos tipos de registro histórico
 public class HistoricoChamado{
     private int idHistorico;
     private DateTime data;

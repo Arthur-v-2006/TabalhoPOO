@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TrabalhoPoo;
 
+// LSP: Pode substituir Usuario sem quebrar o sistema
+// OCP: Extende Usuario sem modificar a classe base
+// SRP: Responsabilidade única - representar um cliente do sistema
 public class Cliente : Usuario{
     private string empresa;
     private string telefone;

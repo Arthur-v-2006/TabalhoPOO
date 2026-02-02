@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace TrabalhoPoo;
 
+// SRP: Responsabilidade única - gerenciar categorias de chamados
+// OCP: Aberta para extensão de novos tipos de categoria
 public class Categoria{
     private int idCategoria;
     public string nome;

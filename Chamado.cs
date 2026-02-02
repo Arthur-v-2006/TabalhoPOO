@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace TrabalhoPoo;
 
+// SRP: Responsabilidade única - representar um chamado de suporte
+// ISP: Implementa interfaces específicas (IAtribuivel, IEncerravel)
+// LSP: Pode ser usado onde IAtribuivel ou IEncerravel são esperados
 public class Chamado : IAtribuivel, IEncerravel{
     private int idChamado;
     public string titulo;
