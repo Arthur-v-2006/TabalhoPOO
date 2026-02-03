@@ -14,7 +14,7 @@
 ## 📊 Diagrama de Classes UML
 
 
-<img src="./TrabalhoPOO.drawio.png" width="500px">
+<img src="./TrabalhoPOO.drawio.png" width="800px">
 
 ## 🏗️ APLICAÇÃO DOS PRINCÍPIOS SOLID
 
