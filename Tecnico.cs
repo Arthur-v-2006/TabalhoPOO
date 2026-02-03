@@ -47,7 +47,7 @@ public class Tecnico : Usuario{
         Console.WriteLine($"Tipo: Técnico");
         Console.WriteLine($"Especialidade: {Especialidade}");
         Console.WriteLine($"Nível: {Nivel}");
-        Console.WriteLine($"Carga Horária: {CargaHoraria}");
+        Console.WriteLine($"Carga Horária: {CargaHoraria.TotalHours} horas");
         Console.WriteLine($"Chamados Resolvidos: {QtdChamadosResolvidos}");
     }
 }

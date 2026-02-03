@@ -8,24 +8,26 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Kauã\\.nuget\\packages\\": {}
+    "C:\\Users\\grautecnico\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\TrabalhoPOO.csproj",
+      "projectUniqueName": "C:\\Users\\grautecnico\\Downloads\\TabalhoPOO\\TrabalhoPOO.csproj",
       "projectName": "TrabalhoPOO",
-      "projectPath": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\TrabalhoPOO.csproj",
-      "packagesPath": "C:\\Users\\Kauã\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\TabalhoPOO\\obj\\",
+      "projectPath": "C:\\Users\\grautecnico\\Downloads\\TabalhoPOO\\TrabalhoPOO.csproj",
+      "packagesPath": "C:\\Users\\grautecnico\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\grautecnico\\Downloads\\TabalhoPOO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kauã\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\grautecnico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

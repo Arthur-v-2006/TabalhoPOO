@@ -63,7 +63,6 @@ public class ChamadoService{
         chamado.AtribuirTecnico(tecnico);
         chamado.Status = "Em Atendimento";
         
-        Console.WriteLine($"Técnico {tecnico.Nome} atribuído ao chamado #{idChamado}");
     }
     
     public Chamado BuscarPorId(int id){
@@ -75,11 +74,11 @@ public class ChamadoService{
         var chamados = _chamadoRepository.ListarTodos();
 
         if (chamados.Count == 0){
-            Console.WriteLine("📭 Nenhum chamado cadastrado");
+            Console.WriteLine("Nenhum chamado cadastrado");
             return;
         }
         
-        Console.WriteLine("📋 LISTA DE CHAMADOS:");
+        Console.WriteLine("=== LISTA DE CHAMADOS: ===");
         foreach (var chamado in chamados){
             Console.WriteLine($"#{chamado.IdChamado} - {chamado.Titulo} - Status: {chamado.Status}");
         }
@@ -106,7 +105,7 @@ public class ChamadoService{
 
         var chamados = _chamadoRepository.ListarTodos();
 
-        Console.WriteLine("RESUMO DO SISTEMA:");
+        Console.WriteLine("=== RESUMO DO SISTEMA: ===");
         Console.WriteLine($"Total de chamados: {chamados.Count}");
         
         var abertos = chamados.Count(c => c.Status == "Aberto");

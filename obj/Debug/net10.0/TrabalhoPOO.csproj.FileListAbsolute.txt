@@ -1,0 +1,15 @@
+C:\Users\grautecnico\Downloads\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.exe
+C:\Users\grautecnico\Downloads\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.deps.json
+C:\Users\grautecnico\Downloads\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.runtimeconfig.json
+C:\Users\grautecnico\Downloads\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.dll
+C:\Users\grautecnico\Downloads\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.pdb
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.AssemblyInfoInputs.cache
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.AssemblyInfo.cs
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.csproj.CoreCompileInputs.cache
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.sourcelink.json
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.dll
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\refint\TrabalhoPOO.dll
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.pdb
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.genruntimeconfig.cache
+C:\Users\grautecnico\Downloads\TabalhoPOO\obj\Debug\net10.0\ref\TrabalhoPOO.dll

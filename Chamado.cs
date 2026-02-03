@@ -88,7 +88,7 @@ public class Chamado : IAtribuivel, IEncerravel{
             throw new ArgumentNullException(nameof(tecnico));
             
         this.tecnico = tecnico;
-        Console.WriteLine($"Técnico {tecnico.Nome} atribuído ao chamado {IdChamado}");
+        Console.WriteLine($"Técnico {tecnico.Nome} atribuído ao chamado #{IdChamado}");
     }
     
     public void Encerrar(string motivo)
@@ -101,7 +101,7 @@ public class Chamado : IAtribuivel, IEncerravel{
         
         historico.RegistrarHistorico($"Chamado encerrado. Motivo: {motivo}", "Fechado", status);
         
-        Console.WriteLine($"Chamado {IdChamado} encerrado. Motivo: {motivo}");
+        Console.WriteLine($"Chamado #{IdChamado} encerrado. Motivo: {motivo}");
     }
     
     public void FecharChamado(){
