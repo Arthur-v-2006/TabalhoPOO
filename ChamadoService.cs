@@ -116,4 +116,15 @@ public class ChamadoService{
         Console.WriteLine($"• Em atendimento: {emAtendimento}");
         Console.WriteLine($"• Fechados: {fechados}");
     }
+
+    public List<Chamado> ListarChamadosDisponiveis(){
+    var todosChamados = _chamadoRepository.ListarTodos();
+    
+    var disponiveis = todosChamados
+        .Where(c => c.Tecnico == null && c.Status != "Fechado" && c.Status != "Resolvido").ToList();
+    
+    Console.WriteLine($"Chamados disponíveis para assumir: {disponiveis.Count}");
+    return disponiveis;
+    }
 }
+
