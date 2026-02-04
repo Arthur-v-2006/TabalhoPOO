@@ -108,7 +108,7 @@ public class SistemaAutenticacao{
         Console.WriteLine("=== CADASTRO DE TÉCNICO ===\n");
         
         try{
-            int novoId = _usuarios.Count > 0 ? _usuarios[_usuarios.Count - 1].IdUsuario + 1 : 2;
+            int novoId = _usuarios.Count > 0 ? _usuarios[_usuarios.Count - 1].IdUsuario + 1 : 1;
             
             Console.Write("Nome: ");
             string nome = Console.ReadLine();
@@ -129,6 +129,12 @@ public class SistemaAutenticacao{
             if (!double.TryParse(Console.ReadLine(), out double horas)){
                 horas = 8;
             }
+
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha)){
+                Console.WriteLine("\nNome, email e senha são obrigatórios!");
+                Console.ReadKey();
+                return;
+        }
             
             Tecnico novoTecnico = new Tecnico(novoId, nome, email, senha, especialidade, nivel, TimeSpan.FromHours(horas));
             

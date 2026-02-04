@@ -41,12 +41,24 @@ public abstract class Usuario{
     }
 
     public bool Login(string email, string senha){
-        if (this.email == email && this.senha == senha && ativo){
-            Console.WriteLine($"Usuário {nome} logado com sucesso");
-            return true;
+        if (this.email == email && this.senha == senha){
+            if (ativo){
+                Console.WriteLine($"Usuário {nome} logado com sucesso");
+                return true;
+            }
+            else{
+                Console.WriteLine("Usuário inativo.");
+                return false;
+            }
         }
-        
-        Console.WriteLine("Email ou senha incorretos ou usuário inativo");
+    
+        if (this.email != email){
+            Console.WriteLine("Email não encontrado.");
+        }
+        else if (this.senha != senha){
+            Console.WriteLine("Senha incorreta.");
+        }
+    
         return false;
     }
 

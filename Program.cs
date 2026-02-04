@@ -33,7 +33,7 @@ class Program
         while (!sair){
             Console.Clear();
             Console.WriteLine("====================================");
-            Console.WriteLine("   SISTEMA DE GERENCIAMENTO DE CHAMADOS");
+            Console.WriteLine("SISTEMA DE GERENCIAMENTO DE CHAMADOS");
             Console.WriteLine("====================================\n");
             
             if (usuarioLogado == null){
