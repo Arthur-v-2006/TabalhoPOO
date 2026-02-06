@@ -106,52 +106,58 @@ public class SistemaAutenticacao{
     }
     
     private void CadastrarTecnico(){
-        Console.Clear();
-        Console.WriteLine("=== CADASTRO DE TÉCNICO ===\n");
+    Console.Clear();
+    Console.WriteLine("=== CADASTRO DE TÉCNICO ===\n");
+    
+    try{
+        int novoId = _usuarios.Count > 0 ? _usuarios[_usuarios.Count - 1].IdUsuario + 1 : 1;
         
-        try{
-            int novoId = _usuarios.Count > 0 ? _usuarios[_usuarios.Count - 1].IdUsuario + 1 : 1;
-            
-            Console.Write("Nome: ");
-            string nome = Console.ReadLine();
-            
-            Console.Write("Email: ");
-            string email = Console.ReadLine();
-            
-            Console.Write("Senha: ");
-            string senha = Console.ReadLine();
-            
-            Console.Write("Especialidade (Rede/Software/Hardware): ");
-            string especialidade = Console.ReadLine();
-            
-            Console.Write("Nível (Júnior/Pleno/Sênior): ");
-            string nivel = Console.ReadLine();
-            
-            Console.Write("Carga Horária (horas por dia): ");
-            if (!double.TryParse(Console.ReadLine(), out double horas)){
-                horas = 8;
-            }
+        Console.Write("Nome: ");
+        string nome = Console.ReadLine();
+        
+        Console.Write("Email: ");
+        string email = Console.ReadLine();
+        
+        Console.Write("Senha: ");
+        string senha = Console.ReadLine();
+        
+        Console.Write("Telefone: ");
+        string telefone = Console.ReadLine();
+        
+        Console.Write("CPF: ");
+        string cpf = Console.ReadLine();
+        
+        Console.Write("Especialidade (Rede/Software/Hardware): ");
+        string especialidade = Console.ReadLine();
+        
+        Console.Write("Nível (Júnior/Pleno/Sênior): ");
+        string nivel = Console.ReadLine();
+        
+        Console.Write("Carga Horária (horas por dia): ");
+        if (!double.TryParse(Console.ReadLine(), out double horas)){
+            horas = 8;
+        }
 
-            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha)){
-                Console.WriteLine("\nNome, email e senha são obrigatórios!");
-                Console.ReadKey();
-                return;
-        }
-            
-            Tecnico novoTecnico = new Tecnico(novoId, nome, email, senha, especialidade, nivel, TimeSpan.FromHours(horas));
-            
-            _usuarios.Add(novoTecnico);
-            
-            Console.WriteLine($"\nTécnico '{nome}' cadastrado com sucesso!");
-            Console.WriteLine($"ID do usuário: {novoId}");
-            Console.WriteLine("Pressione qualquer tecla para continuar...");
+        if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha)){
+            Console.WriteLine("\nNome, email e senha são obrigatórios!");
             Console.ReadKey();
+            return;
         }
-        catch (Exception ex){
-            Console.WriteLine($"\nErro ao cadastrar técnico: {ex.Message}");
-            Console.ReadKey();
-        }
+        
+        Tecnico novoTecnico = new Tecnico(novoId, nome, email, senha, especialidade, nivel, TimeSpan.FromHours(horas), telefone, cpf);
+        
+        _usuarios.Add(novoTecnico);
+        
+        Console.WriteLine($"\nTécnico '{nome}' cadastrado com sucesso!");
+        Console.WriteLine($"ID do usuário: {novoId}");
+        Console.WriteLine("Pressione qualquer tecla para continuar...");
+        Console.ReadKey();
     }
+    catch (Exception ex){
+        Console.WriteLine($"\nErro ao cadastrar técnico: {ex.Message}");
+        Console.ReadKey();
+    }
+}
     
     private string LerSenhaComMascara(){
         string senha = "";
