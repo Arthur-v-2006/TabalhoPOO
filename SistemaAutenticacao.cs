@@ -9,6 +9,7 @@ public class SistemaAutenticacao{
     public Usuario FazerLogin(){
         Console.Clear();
         Console.WriteLine("=== LOGIN ===");
+        Console.WriteLine();
         
         Console.Write("Email: ");
         string email = Console.ReadLine();
@@ -31,6 +32,7 @@ public class SistemaAutenticacao{
     public void CadastrarNovoUsuario(){
         Console.Clear();
         Console.WriteLine("=== CADASTRO DE NOVO USUÁRIO ===");
+        Console.WriteLine();
         Console.WriteLine("1. Cadastrar Cliente");
         Console.WriteLine("2. Cadastrar Técnico");
         Console.WriteLine("0. Voltar");
@@ -92,7 +94,7 @@ public class SistemaAutenticacao{
             
             _usuarios.Add(novoCliente);
             
-            Console.WriteLine($"\n✅ Cliente '{nome}' cadastrado com sucesso!");
+            Console.WriteLine($"\nCliente '{nome}' cadastrado com sucesso!");
             Console.WriteLine($"ID do usuário: {novoId}");
             Console.WriteLine("Pressione qualquer tecla para continuar...");
             Console.ReadKey();
@@ -140,7 +142,7 @@ public class SistemaAutenticacao{
             
             _usuarios.Add(novoTecnico);
             
-            Console.WriteLine($"\n✅ Técnico '{nome}' cadastrado com sucesso!");
+            Console.WriteLine($"\nTécnico '{nome}' cadastrado com sucesso!");
             Console.WriteLine($"ID do usuário: {novoId}");
             Console.WriteLine("Pressione qualquer tecla para continuar...");
             Console.ReadKey();
