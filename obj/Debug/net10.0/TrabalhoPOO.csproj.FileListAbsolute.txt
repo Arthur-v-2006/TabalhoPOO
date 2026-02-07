@@ -28,3 +28,18 @@ C:\Users\Windows 10\Downloads\TabalhoPOO\obj\Debug\net10.0\refint\TrabalhoPOO.dl
 C:\Users\Windows 10\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.pdb
 C:\Users\Windows 10\Downloads\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.genruntimeconfig.cache
 C:\Users\Windows 10\Downloads\TabalhoPOO\obj\Debug\net10.0\ref\TrabalhoPOO.dll
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.exe
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.deps.json
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.runtimeconfig.json
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.dll
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\bin\Debug\net10.0\TrabalhoPOO.pdb
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.AssemblyInfoInputs.cache
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.AssemblyInfo.cs
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.csproj.CoreCompileInputs.cache
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.sourcelink.json
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.dll
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\refint\TrabalhoPOO.dll
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.pdb
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\TrabalhoPOO.genruntimeconfig.cache
+C:\Users\Kauã\OneDrive\Área de Trabalho\,\Programação\TabalhoPOO\obj\Debug\net10.0\ref\TrabalhoPOO.dll

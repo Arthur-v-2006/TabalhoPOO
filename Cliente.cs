@@ -52,7 +52,7 @@ public class Cliente : Usuario{
         Console.WriteLine($"Contato: {telefone}");
     }
 
-    public void AvaliarAtendimento(int idChamado, int nota, string comentario){
+    public void AvaliarAtendimento(int idChamado, double nota, string comentario){
         Console.WriteLine($"Cliente {Nome} avaliou atendimento do chamado #{idChamado}");
         Console.WriteLine($"Nota: {nota}/5");
         Console.WriteLine($"Comentário: {comentario}");

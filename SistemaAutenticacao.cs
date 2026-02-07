@@ -6,28 +6,37 @@ namespace TrabalhoPoo;
 public class SistemaAutenticacao{
     private List<Usuario> _usuarios = new List<Usuario>();
     
-    public Usuario FazerLogin(){
-        Console.Clear();
-        Console.WriteLine("=== LOGIN ===");
-        Console.WriteLine();
-        
-        Console.Write("Email: ");
-        string email = Console.ReadLine();
-        
-        Console.Write("Senha: ");
-        string senha = LerSenhaComMascara();
-        
-        foreach (var usuario in _usuarios){
-            if (usuario.Login(email, senha)){
-                return usuario;
-            }
+    public Usuario FazerLogin()
+{
+    Console.Clear();
+    Console.WriteLine("=== LOGIN ===");
+    Console.WriteLine();
+    
+    Console.Write("Email: ");
+    string email = Console.ReadLine();
+    
+    Console.Write("Senha: ");
+    string senha = LerSenhaComMascara();
+    
+    // Procura o usuário correto
+    foreach (var usuario in _usuarios)
+    {
+        // Agora o Login() verifica TUDO: email, senha e se está ativo
+        if (usuario.Login(email, senha))
+        {
+            Console.WriteLine($"\nUsuário {usuario.Nome} logado com sucesso!");
+            Console.WriteLine("Pressione qualquer tecla para continuar...");
+            Console.ReadKey();
+            return usuario;
         }
-        
-        Console.WriteLine("\nEmail ou senha incorretos!");
-        Console.WriteLine("Pressione qualquer tecla para continuar...");
-        Console.ReadKey();
-        return null;
     }
+    
+    // Se chegou aqui, nenhum usuário foi encontrado ou credenciais estão erradas
+    Console.WriteLine("\nEmail ou senha incorretos, ou usuário inativo!");
+    Console.WriteLine("Pressione qualquer tecla para continuar...");
+    Console.ReadKey();
+    return null;
+}
     
     public void CadastrarNovoUsuario(){
         Console.Clear();

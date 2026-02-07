@@ -40,27 +40,25 @@ public abstract class Usuario{
         set { ativo = value; }
     }
 
-    public bool Login(string email, string senha){
-        if (this.email == email && this.senha == senha){
-            if (ativo){
-                Console.WriteLine($"Usuário {nome} logado com sucesso");
-                return true;
-            }
-            else{
-                Console.WriteLine("Usuário inativo.");
-                return false;
-            }
-        }
+public bool Login(string email, string senha)
+{
+    // 1. Limpa os dados de entrada
+    email = email?.Trim() ?? "";
+    senha = senha?.Trim() ?? "";
     
-        if (this.email != email){
-            Console.WriteLine("Email não encontrado.");
-        }
-        else if (this.senha != senha){
-            Console.WriteLine("Senha incorreta.");
-        }
+    // 2. Compara de forma segura (tratando nulls)
+    bool emailCorreto = string.Equals(this.email?.Trim(), email, StringComparison.OrdinalIgnoreCase);
+    bool senhaCorreta = string.Equals(this.senha?.Trim(), senha, StringComparison.Ordinal);
     
-        return false;
+    // 3. Se ambos estiverem corretos E o usuário estiver ativo
+    if (emailCorreto && senhaCorreta && ativo)
+    {
+        return true; // Login bem-sucedido
     }
+    
+    // 4. Caso contrário, retorna false
+    return false;
+}
 
     public void Logout(){
         Console.WriteLine($"Usuário {nome} realizou logout.");

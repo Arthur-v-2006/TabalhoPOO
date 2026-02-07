@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Windows 10\\.nuget\\packages\\": {}
+    "C:\\Users\\Kauã\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows 10\\Downloads\\TabalhoPOO\\TrabalhoPOO.csproj",
+      "projectUniqueName": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\,\\Programação\\TabalhoPOO\\TrabalhoPOO.csproj",
       "projectName": "TrabalhoPOO",
-      "projectPath": "C:\\Users\\Windows 10\\Downloads\\TabalhoPOO\\TrabalhoPOO.csproj",
-      "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows 10\\Downloads\\TabalhoPOO\\obj\\",
+      "projectPath": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\,\\Programação\\TabalhoPOO\\TrabalhoPOO.csproj",
+      "packagesPath": "C:\\Users\\Kauã\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kauã\\OneDrive\\Área de Trabalho\\,\\Programação\\TabalhoPOO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Windows 10\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Kauã\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"

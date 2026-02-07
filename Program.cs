@@ -342,8 +342,9 @@ class Program
         
         Console.Write("Digite o ID do chamado: ");
         if (int.TryParse(Console.ReadLine(), out int idChamado)){
-            Console.Write("Nota (0-10): ");
-            if (int.TryParse(Console.ReadLine(), out int nota) && nota >= 0 && nota <= 10){
+            Console.Write("Nota (0-5): ");
+            string entrada = Console.ReadLine().Replace(",", ".");
+            if (double.TryParse(entrada, System.Globalization.CultureInfo.InvariantCulture, out double nota) && nota >= 0 && nota <= 5){
                 Console.Write("Comentário: ");
                 string comentario = Console.ReadLine();
                 
